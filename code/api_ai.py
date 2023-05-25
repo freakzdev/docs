@@ -14,7 +14,8 @@ def bot_request(module, data, headers={ "Content-Type": "application/json", "Aut
   url=str(bot_api_host) + "/api/v1/ai/"+str(module)+"/"
   response = requests.post(url, headers=headers, json=data)
   return response
-
+# ?token=GHSAT0AAAAAACDCQL6N352TEBW3MZNKC55MZDPSX2Q
+#https://raw.githubusercontent.com/freakzdev/docs/main/sources/viking_westie.png?token=GHSAT0AAAAAACDCQL6NMOY24MTSVQ5EC4PSZDPSYPQ
 ##### AI MODULE ####
 #######################################################################################################################
 
@@ -37,8 +38,8 @@ params={
     "instruction": "Redacta una mensaje de felicitación de cumpleaños para los clientes de mi cafetería" # Indication to generate the text
   }
 }
-#response = bot_request("composer", params)
-#print("JSON Response:", response.json())
+response = bot_request("composer", params)
+print("JSON Response:", response.json())
 
 #### rewriter: method
 params={
