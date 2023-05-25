@@ -1,7 +1,7 @@
 #!/bin/dash
-# Environment variables definition: env_vars.sh
+# Environment variables definition: api_ai_env.sh
 # Linux Shell Script
-# TO RUN THIS SCRIPT EXECUTE: source ./env_vars.sh
+# TO RUN THIS SCRIPT EXECUTE: source ./api_ai_env.sh
 
 ## PYTHON
 ## TO SET ENVIRONMENT VARIABLES TO OS RUN:

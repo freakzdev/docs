@@ -1,5 +1,5 @@
 <?php
-# Environment variables definition: env_vars.php
+# Environment variables definition: api_ai_env.php
 # PHP script
 /** PHP CODE */
 /** Variables de entorno */

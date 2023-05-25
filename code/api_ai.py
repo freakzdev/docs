@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Main Script: bot_api.py
+# Main Script: api_ai.py
 # PHP script
 import os
 import requests
@@ -27,7 +27,7 @@ params={
     "size": "1024x1024" # Image size ( 1024x1024 | 512x512 | 256x256 )
   }
 }
-#response = bot_request("ai", params)
+#response = bot_request("composer", params)
 #print("JSON Response:", response.json())
 
 #### writer: method
@@ -37,7 +37,7 @@ params={
     "instruction": "Redacta una mensaje de felicitación de cumpleaños para los clientes de mi cafetería" # Indication to generate the text
   }
 }
-#response = bot_request("ai", params)
+#response = bot_request("composer", params)
 #print("JSON Response:", response.json())
 
 #### rewriter: method
@@ -48,7 +48,7 @@ params={
     "instruction": "Traduce al ruso" # Editing statement
   }
 }
-#response = bot_request("ai", params)
+#response = bot_request("composer", params)
 #print("JSON Response:", response.json())
 
 #######################################################################################################################

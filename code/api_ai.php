@@ -1,5 +1,5 @@
 <?php
-# Main Script: bot_api.php
+# Main Script: api_ai.php
 # PHP script
 require_once ".config.php";
 function bot_request( $params, $module ) {
@@ -35,7 +35,7 @@ function bot_request( $params, $module ) {
   return $response;
 }
 
-/** AI MODULE */
+/** COMPOSER MODULE */
 /**************/
 
 /** designer: method */
@@ -47,7 +47,7 @@ $params = array(
     "size" => "512x512" // Image size ( 1024x1024 | 512x512 | 256x256 )
   ) 
 );
-$response = bot_request( "ai", $params );
+$response = bot_request( "composer", $params );
 echo "JSON Response: " . json_encode( $response );
 
 /** writer: method */
@@ -57,7 +57,7 @@ $params = array(
     "instruction" => "Redacta una mensaje de felicitación de cumpleaños para los clientes de mi cafetería" // Indication to generate the text
   ) 
 );
-$response = bot_request( "ai", $params );
+$response = bot_request( "composer", $params );
 echo "JSON Response: " . json_encode( $response );
 
 /** rewriter: method */
@@ -68,7 +68,7 @@ $params = array(
     "instruction" => "traduce el texto al ingles" // Editing statement
   ) 
 );
-$response = bot_request( "ai", $params );
+$response = bot_request( "composer", $params );
 echo "JSON Response: " . json_encode( $response );
 
 /**********************************************************************************************************************/
