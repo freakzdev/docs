@@ -5,7 +5,7 @@ Esta es una guia rápida para el uso del **ai-engine API**
 Esta sección explica el modelo de autentificación para el uso del **API**
 
 **GUÍAS**:
-- [AUTH_DETAIL](https://github.com/freakzdev/ai_docs/tree/main/es//auth.ipynb)
+- [AUTH_DETAIL](https://github.com/freakzdev/docs/tree/main/es/ai/auth.ipynb)
 
 ## - Módulo **AI**: 
 Este módulo permite interactuar con los motores **AI**, para que el modelo realice las siguientes tareas:
@@ -14,13 +14,13 @@ Este módulo permite interactuar con los motores **AI**, para que el modelo real
 3) Permite generar imagenes, 3D renders, etc.
 
 **GUÍAS**:
-- [AI_DETAIL](https://github.com/freakzdev/ai_docs/tree/main/es//ai.ipynb)
+- [AI_DETAIL](https://github.com/freakzdev/docs/tree/main/es/ai/ai.ipynb)
 
 ## - Módulo **TRAINING**:
 El módulo **TRAINIG**, permite gestionar el motor **AI**, para implementar un ChatBOT completamente personalizado y automatizado que interactúa con los usuarios a través de de lenguaje natural, proporcionando respuestas, asistencia y realizando tareas específicas para tu empresa, 
 
 **GUÍAS**:
-- [TRAINING_DETAIL](https://github.com/freakzdev/ai_docs/tree/main/es//training.ipynb)
+- [TRAINING_DETAIL](https://github.com/freakzdev/docs/tree/main/es/ai/training.ipynb)
 
 ## - Módulo **BOT**:
 Al implementar el módulo **BOT** es posible automatizar tareas com las siguientes:
@@ -32,4 +32,4 @@ Al implementar el módulo **BOT** es posible automatizar tareas com las siguient
 **Automatización de tareas:** El chatbot puede también pueden realizar tareas automatizadas, como programar citas y brindar actualizaciones de estado.
 
 **GUÍAS**:
-- [BOT_DETAIL](https://github.com/freakzdev/ai_docs/tree/main/es//bot.ipynb)
+- [BOT_DETAIL](https://github.com/freakzdev/docs/tree/main/es/ai/bot.ipynb)
