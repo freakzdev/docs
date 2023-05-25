@@ -1,4 +1,4 @@
-# freaKZdev Projects Docs
+# freaKZdev DOCS
 
 **Versions:** 
 - [ESPAÑOL](https://github.com/freakzdev/docs/tree/main/es)
