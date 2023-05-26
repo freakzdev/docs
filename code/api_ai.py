@@ -63,8 +63,8 @@ params={
     "lang": "es"  # Failover module language
   }
 }
-#response = bot_request("training", params)
-#print("JSON Response:", response.json())
+response = bot_request("training", params)
+print("JSON Response:", response.json())
 
 #### learn: method
 params={
@@ -82,7 +82,7 @@ params={
 #### learning_file: method
 params={
   "method": "learning_file",
-  "args": "https://api.freakz.dev/_PLUGINS_/docs/sources/es_trainig_data.xlsx" # URL of the file to upload
+  "args": "https://api.freakz.dev/_PLUGINS_/docs/resources/es_trainig_data.xlsx" # URL of the file to upload
 }
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
@@ -157,8 +157,8 @@ params={
 params={
   "method": "reply",
   "args": {
-    "input": "Donde estan ubicados",
-    "max": 1
+    "input": "wifi",
+    "max": 5
   }
 }
 #response = bot_request("bot", params)
@@ -184,16 +184,16 @@ params={
 
 
 #### relearning: set
-#params={
-#  "method": "set",
-#  "args": {
-#    "mechanism": "telegram",
-#    "config": {
-#      "name": "API Bot",
-#      "username": "scriptra_bot",
-#      "token": "5877083878:AAE7oep-GG0cQin4Dp7N01BEF8Y5SNrvuRo"
-#    }
-#  }
-#}
+params={
+  "method": "set",
+  "args": {
+    "mechanism": "telegram",
+    "config": {
+      "name": "Freakz BOT",
+      "username": "freakz_api_bot",
+      "token": "6002115610:AAElVzR5SRpvNwxl6qXkarW90zaDamiNeWA"
+    }
+  }
+}
 #response = bot_request("webhook", params)
 #print("JSON Response:", response.json())
