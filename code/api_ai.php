@@ -82,7 +82,7 @@ $params = array(
   "args" => array( 
     "tag" => "SALUDO_001", // Unique identification tag. ( IMPORTANT: This data allows the modification of the learning text )
     "input" => base64_encode( "Hola, bienvenido a The Coffee Coop, en que puedo ayudarte?" ), // Natural language text
-    "keywords" => array(), // Keywords variables
+    "keywords" => "", // Words to be interpreted by the AI engine to generate the responses
     "actions" => array() // Callback actions
   ) 
 );

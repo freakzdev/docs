@@ -11,11 +11,9 @@ bot_api_id = os.environ.get("BOT_API_ID")
 bot_apy_token = os.environ.get("BOT_API_TOKEN")
 
 def bot_request(module, data, headers={ "Content-Type": "application/json", "Auth": str(bot_api_id), "Authorization": str(bot_apy_token) } ):
-  url=str(bot_api_host) + "/api/v1/ai/"+str(module)+"/"
-  response = requests.post(url, headers=headers, json=data)
+  url=str(bot_api_host) + "/api/v1/ai/" + str(module) + "/"
+  response = requests.post(url, headers=headers, json=data,  allow_redirects=False)
   return response
-# ?token=GHSAT0AAAAAACDCQL6N352TEBW3MZNKC55MZDPSX2Q
-#https://raw.githubusercontent.com/freakzdev/docs/main/sources/viking_westie.png?token=GHSAT0AAAAAACDCQL6NMOY24MTSVQ5EC4PSZDPSYPQ
 ##### AI MODULE ####
 #######################################################################################################################
 
@@ -38,8 +36,8 @@ params={
     "instruction": "Redacta una mensaje de felicitación de cumpleaños para los clientes de mi cafetería" # Indication to generate the text
   }
 }
-response = bot_request("composer", params)
-print("JSON Response:", response.json())
+#response = bot_request("composer", params)
+#print("JSON Response:", response.json())
 
 #### rewriter: method
 params={
@@ -59,59 +57,51 @@ params={
 #######################################################################################################################
 
 #### failover: method
-#params={
-#  "method": "failover",
-#  "args": {
-#    "lang": "es"  # Failover module language
-#  }
-#}
+params={
+  "method": "failover",
+  "args": {
+    "lang": "es"  # Failover module language
+  }
+}
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
 
 #### learn: method
-#params={
-#  "method": "learn",
-#  "args": {
-#    "tag": "ZONA_PRIVADA_006", # Unique identification tag. ( IMPORTANT: This data allows the modification of the learning text )
-#    "input": str(base64.b64encode(("Nuestro local cuenta con un salon privado donde bajo reserva tu puedes celebrar pequenños eventos como cumpleaño, reuniones de trabajo, etc.").encode("utf-8")), "utf-8"), # Natural language text
-#    "keywords": {}, # Keywords variables
-#    "action": {}  # Callback actions
-#  }
-#}
+params={
+  "method": "learn",
+  "args": {
+    "tag": "ZONA_PRIVADA_006", # Unique identification tag. ( IMPORTANT: This data allows the modification of the learning text )
+    "input": str(base64.b64encode(("Nuestro local cuenta con un salon privado donde bajo reserva tu puedes celebrar pequenños eventos como cumpleaño, reuniones de trabajo, etc.").encode("utf-8")), "utf-8"), # Natural language text
+    "keywords": "RESERVA SALON EVENTOS FIESTAS REUNIONES", # Words to be interpreted by the AI engine to generate the responses
+    "action": {}  # Callback actions
+  }
+}
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
 
 #### learning_file: method
-#params={
-#  "method": "learning_file",
-#  "args": "https://dev.scriptra.ec/_STORE_/temp/es_trainig_data.xlsx" # URL of the file to upload
-#}
+params={
+  "method": "learning_file",
+  "args": "https://api.freakz.dev/_PLUGINS_/docs/sources/es_trainig_data.xlsx" # URL of the file to upload
+}
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
 
 #### relearning: method
-#params={
-#  "method": "relearning",
-#  # Does not require additional arguments
-#}
-#response = bot_request("training", params)
-#print("JSON Response:", response.json())
-
-#### relearning: method
-#params={
-#  "method": "relearning",
-#  # Does not require additional arguments
-#}
+params={
+  "method": "relearning",
+  # Does not require additional arguments
+}
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
 
 #### relearning: learnings_get
-#params={
-#  "method": "learnings_get",
-#  "args": {
-#    "format": "json" # File Format: .xlsx | .json
-#  }
-#}
+params={
+  "method": "learnings_get",
+  "args": {
+    "format": "xlsx" # File Format: .xlsx | .json
+  }
+}
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
 
@@ -136,12 +126,12 @@ params={
 #print("JSON Response:", response.json())
 
 #### unlearn: method
-#params={
-#  "method": "unlearn",
-#  "args": {
-#    "tags": [ "UNLEARN_001", "UNLEARN_002", "UNLEARN_003", "UNLEARN_004", "UNLEARN_005" ] # Unique identification tags array
-#  }
-#}
+params={
+  "method": "unlearn",
+  "args": {
+    "tags": [ "UNLEARN_001", "UNLEARN_002", "UNLEARN_003", "UNLEARN_004", "UNLEARN_005" ] # Unique identification tags array
+  }
+}
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
 
@@ -152,25 +142,25 @@ params={
 #######################################################################################################################
 
 #### reply: method
-#params={
-#  "method": "reply",
-#  "args": {
-#    "input": "Hola buenos días", # User requirement
-#    "max": 2 # Maximum number of responses requested (IMPORTANT: In a chatbot it is advisable to request the most matching response)
-#    # Solo como prueba, solicitamos las 2 respuestas más coincidentes
-#  }
-#}
+params={
+  "method": "reply",
+  "args": {
+    "input": "Hola buenos días", # User requirement
+    "max": 2 # Maximum number of responses requested (IMPORTANT: In a chatbot it is advisable to request the most matching response)
+    # Solo como prueba, solicitamos las 2 respuestas más coincidentes
+  }
+}
 #response = bot_request("bot", params)
 #print("JSON Response:", response.json())
 
 #### reply: method
-#params={
-#  "method": "reply",
-#  "args": {
-#    "input": "Donde estan ubicados?",
-#    "max": 1
-#  }
-#}
+params={
+  "method": "reply",
+  "args": {
+    "input": "Donde estan ubicados",
+    "max": 1
+  }
+}
 #response = bot_request("bot", params)
 #print("JSON Response:", response.json())
 
