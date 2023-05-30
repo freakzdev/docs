@@ -2,7 +2,7 @@
 # Main Script: api_ai.php
 # PHP script
 require_once ".config.php";
-function bot_request( $params, $module ) {
+function bot_request( $module, $params ) {
   $ch = curl_init();
   curl_setopt( $ch, CURLOPT_URL, "{$GLOBALS[ "BOT_API_HOST" ]}/api/v1/ai/{$module}/" );
   curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, "POST" );
@@ -130,7 +130,7 @@ $params = array(
     // Solo como prueba, solicitamos las 2 respuestas más coincidentes
   )
 );
-$response = bot_request( "training", $params );
+$response = bot_request( "bot", $params );
 echo "JSON Response: " . json_encode( $response );
 
 /** reply: method */
@@ -141,7 +141,7 @@ $params = array(
     "max" => 1
   )
 );
-$response = bot_request( "training", $params );
+$response = bot_request( "bot", $params );
 echo "JSON Response: " . json_encode( $response );
 
 /** reply: method */
@@ -152,7 +152,7 @@ $params = array(
     "max" => 1
   )
 );
-$response = bot_request( "training", $params );
+$response = bot_request( "bot", $params );
 echo "JSON Response: " . json_encode( $response );
 
 /**********************************************************************************************************************/

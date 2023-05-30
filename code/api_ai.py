@@ -63,8 +63,8 @@ params={
     "lang": "es"  # Failover module language
   }
 }
-response = bot_request("training", params)
-print("JSON Response:", response.json())
+#response = bot_request("training", params)
+#print("JSON Response:", response.json())
 
 #### learn: method
 params={
@@ -82,7 +82,7 @@ params={
 #### learning_file: method
 params={
   "method": "learning_file",
-  "args": "https://api.freakz.dev/_PLUGINS_/docs/resources/es_trainig_data.xlsx" # URL of the file to upload
+  "args": "https://api.freakz.dev/plugins/docs/resources/es_trainig_data.xlsx" # URL of the file to upload
 }
 #response = bot_request("training", params)
 #print("JSON Response:", response.json())
@@ -161,8 +161,8 @@ params={
     "max": 5
   }
 }
-#response = bot_request("bot", params)
-#print("JSON Response:", response.json())
+response = bot_request("bot", params)
+print("JSON Response:", response.json())
 
 #### reply: method
 #params={
